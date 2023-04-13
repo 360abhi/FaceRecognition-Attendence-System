@@ -194,3 +194,6 @@ def reset(request):
         else:
             pass
     return redirect('index')
+
+def loginpage(request):
+     return render(request, 'core/login.html')

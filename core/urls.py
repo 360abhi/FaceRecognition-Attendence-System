@@ -8,6 +8,8 @@ urlpatterns = [
     path('scan/',scan,name='scan'),
     path('profiles/', profiles, name= 'profiles'),
     path('details/', details, name= 'details'),
+    path('loginpage/', loginpage, name= 'loginpage'),
+
 
     path('add_profile/',add_profile,name='add_profile'),
     path('edit_profile/<int:id>/',edit_profile,name='edit_profile'),
