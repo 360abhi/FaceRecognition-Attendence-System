@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, HttpResponse, redirect
 from .models import *
 from .forms import *
@@ -194,3 +195,21 @@ def reset(request):
         else:
             pass
     return redirect('index')
+
+def login(request):
+    if request.method == 'POST':
+        # Retrieve the username and email from the form
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+
+        # Check if the username and email are correct (replace with your own authentication logic)
+        if username == '1234' and email == '1234@in.com':
+            # If they are correct, redirect to the next page
+            return render(request, 'core/index.html')
+        else:
+            # If they are incorrect, render the login page again with an error message
+            context = {'error_message': 'Incorrect username or email'}
+            return render(request, 'core/login.html', context)
+    else:
+        # If the request method is not POST, render the login page
+        return render(request, 'core/login.html')
