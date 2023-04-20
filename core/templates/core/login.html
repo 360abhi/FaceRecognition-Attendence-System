@@ -2,11 +2,11 @@
 {% block content %}
 
 <head>
-    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
 </head>
 
 <div class="login-box">
-    <h1>Login</h1>
+    <h1>Admin Login</h1>
     {% if error_message %}
     <div class="error-message">{{ error_message }}</div>
     {% endif %}
@@ -14,8 +14,8 @@
         {% csrf_token %}
         <label for="username">Username:</label>
         <input autocomplete="off" type="text" id="username" name="username">
-        <label for="email">Passowrd</label>
-        <input autocomplete="off" type="text" id="email" name="email">
+        <label for="password">Passowrd</label>
+        <input autocomplete="off" type="text" id="password" name="password">
         <button type="submit">Login</button>
     </form>
 </div>

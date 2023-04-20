@@ -18,11 +18,22 @@ label {
   font-weight: bold;
 }
 input[type="text"],
-input[type="email"] {
+input[type="password"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
   border: none;
+  border-radius: 3px;
+  font-size: 18px;
+}
+
+.pwd {
+  width: 100%;
+  visibility: hidden;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  display: block;
   border-radius: 3px;
   font-size: 18px;
 }

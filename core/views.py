@@ -200,10 +200,10 @@ def login(request):
     if request.method == 'POST':
         # Retrieve the username and email from the form
         username = request.POST.get('username')
-        email = request.POST.get('email')
+        email = request.POST.get('password')
 
         # Check if the username and email are correct (replace with your own authentication logic)
-        if username == '1234' and email == '1234@in.com':
+        if username == 'abhishek' and email == '12345':
             # If they are correct, redirect to the next page
             return render(request, 'core/index.html')
         else:
